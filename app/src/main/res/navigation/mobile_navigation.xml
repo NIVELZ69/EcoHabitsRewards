@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.actividad3.ecohabitsrewards.view.fragments.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.actividad3.ecohabitsrewards.view.fragments.ChallengesFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_challenges" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.actividad3.ecohabitsrewards.view.fragments.RewardsFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_rewards" />
+    <fragment
+        android:id="@+id/nav_accepted_challenges"
+        android:name="com.actividad3.ecohabitsrewards.view.fragments.AcceptedChallengesFragment"
+        android:label="Retos Aceptados"
+        tools:layout="@layout/fragment_accepted_challenges" />
+    <fragment
+        android:id="@+id/nav_completed_challenges"
+        android:name="com.actividad3.ecohabitsrewards.view.fragments.CompletedChallengesFragment"
+        android:label="Retos Completados"
+        tools:layout="@layout/fragment_completed_challenges" />
+    <fragment
+        android:id="@+id/nav_statistics"
+        android:name="com.actividad3.ecohabitsrewards.view.fragments.StatisticsFragment"
+        android:label="Estadísticas"
+        tools:layout="@layout/fragment_statistics" />
+</navigation>

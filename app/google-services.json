@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "637978078022",
+    "project_id": "ecohabits-rewards",
+    "storage_bucket": "ecohabits-rewards.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:637978078022:android:308fb1d1b9fc3dbb9ad347",
+        "android_client_info": {
+          "package_name": "com.actividad3.ecohabitsrewards"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAb7xhiusiEiLW4MjblIkrMWdcwHItlxks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
