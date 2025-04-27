@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.TextView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -34,12 +35,23 @@ class MainActivity : AppCompatActivity() {
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
+        val headerView = navView.getHeaderView(0)
+        val headerTitle = headerView.findViewById<TextView>(R.id.nav_header_title)
+        val headerSubtitle = headerView.findViewById<TextView>(R.id.nav_header_subtitle)
+
+        val user = FirebaseAuth.getInstance().currentUser
+        user?.let {
+            val email = it.email ?: "Usuario"
+            val username = email.substringBefore("@").replaceFirstChar { c -> c.uppercaseChar() } // Capitalizar primera letra
+
+            headerTitle.text = username
+            headerSubtitle.text = email
+        }
+
         val navController = findNavController(R.id.nav_host_fragment_content_main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
+                R.id.nav_home, R.id.nav_challenges, R.id.nav_rewards
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -48,7 +60,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
         return true
     }
