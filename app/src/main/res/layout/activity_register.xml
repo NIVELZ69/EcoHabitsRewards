@@ -3,13 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp">
+    android:padding="24dp"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center_horizontal">
+        android:gravity="center"
+        android:layout_gravity="center">
 
         <TextView
             android:id="@+id/tvRegisterTitle"
@@ -18,13 +20,14 @@
             android:text="Registro"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:layout_marginBottom="24dp" />
+            android:layout_marginBottom="24dp"
+            android:textColor="@color/text_dark" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
-            app:boxStrokeColor="@color/green">
+            app:boxStrokeColor="@color/green_primary">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etEmailRegister"
@@ -38,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
-            app:boxStrokeColor="@color/green">
+            app:boxStrokeColor="@color/green_primary">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etPasswordRegister"
@@ -52,7 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
-            app:boxStrokeColor="@color/green">
+            app:boxStrokeColor="@color/green_primary">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etConfirmPassword"
@@ -62,19 +65,19 @@
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Registrar"
-            android:backgroundTint="@color/green" />
+            style="@style/GreenButton" />
 
         <TextView
             android:id="@+id/tvGoToLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="¿Ya tienes cuenta? Inicia sesión"
-            android:textColor="@color/green"
+            android:textColor="@color/green_primary"
             android:layout_marginTop="16dp"
             android:clickable="true"
             android:focusable="true" />

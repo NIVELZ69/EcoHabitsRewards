@@ -1,16 +1,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Theme.EcoHabitsRewards" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+    <!-- Tema oscuro para la app -->
+    <style name="Theme.EcoHabitsRewards" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Colores oscuros adaptados -->
+        <item name="colorPrimary">#A5D6A7</item> <!-- Verde más suave en dark mode -->
         <item name="colorOnPrimary">@color/black</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorPrimaryContainer">#66BB6A</item>
+
+        <item name="colorSecondary">#C8E6C9</item>
         <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+
+        <!-- Fondo oscuro -->
+        <item name="android:windowBackground">#121212</item>
+        <item name="android:statusBarColor">#1B5E20</item>
+        <item name="android:navigationBarColor">#1B5E20</item>
+
+        <item name="colorSurface">#1E1E1E</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="colorOutline">#424242</item>
+
+        <item name="android:forceDarkAllowed" tools:targetApi="29">true</item>
     </style>
 </resources>

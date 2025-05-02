@@ -45,7 +45,7 @@ class RegisterActivity : AppCompatActivity() {
                     user?.let {
                         val userData = hashMapOf(
                             "email" to it.email,
-                            "displayName" to it.email?.substringBefore("@"), // O puedes poner nombre recogido de un campo
+                            "displayName" to it.email?.substringBefore("@"),
                             "points" to 0L,
                             "createdAt" to com.google.firebase.Timestamp.now()
                         )

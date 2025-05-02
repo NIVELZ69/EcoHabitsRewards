@@ -17,7 +17,7 @@
         <activity
             android:name=".view.activities.auth.LoginActivity"
             android:exported="true"
-            android:theme="@style/Theme.EcoHabitsRewards.NoActionBar">
+            android:theme="@style/Theme.EcoHabitsRewards">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -27,7 +27,7 @@
         <activity
             android:name=".view.activities.auth.RegisterActivity"
             android:exported="false"
-            android:theme="@style/Theme.EcoHabitsRewards.NoActionBar" />
+            android:theme="@style/Theme.EcoHabitsRewards" />
 
         <activity
             android:name=".view.activities.MainActivity"
